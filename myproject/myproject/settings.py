@@ -28,6 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -37,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
+
     'rest_framework',
 ]
 
@@ -125,3 +126,13 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#Added_Ojash
+import markdown
+print('Markdown module path', markdown.__file__)
+print('Markdown version:', markdown.version)
+
+#Added_New_Ojash
+
+from rest_framework import compat
+compat.md_filter_add_syntax_highlight = lambda md: False
